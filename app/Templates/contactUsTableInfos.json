@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text-input",
+        "data": {
+            "name": "name",
+            "label": "contact_and_faq.contact_form.label.name",
+            "default": null,
+            "required": true,
+            "validation_errors": [],
+            "form_item_type": "input",
+            "type": "text",
+            "maxlength": 255,
+            "minlength": 0,
+            "placeholder": "Name"
+        }
+    },
+    {
+        "type": "text-input",
+        "data": {
+            "name": "email",
+            "label": "contact_and_faq.contact_form.label.email",
+            "default": null,
+            "required": true,
+            "validation_errors": [],
+            "form_item_type": "input",
+            "type": "email",
+            "maxlength": 255,
+            "minlength": 0,
+            "placeholder": "Email"
+        }
+    },
+    {
+        "type": "text-input",
+        "data": {
+            "name": "phone",
+            "label": "contact_and_faq.contact_form.label.phone",
+            "default": null,
+            "required": true,
+            "validation_errors": [],
+            "form_item_type": "input",
+            "type": "tel",
+            "maxlength": 15,
+            "minlength": 0,
+            "placeholder": "Phone"
+        }
+    },
+    {
+        "type": "textarea",
+        "data": {
+            "name": "message",
+            "label": "contact_and_faq.contact_form.label.message",
+            "default": null,
+            "required": true,
+            "validation_errors": [],
+            "placeholder": "Message"
+        }
+    }
+]

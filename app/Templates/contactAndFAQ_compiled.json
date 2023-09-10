@@ -1,0 +1,155 @@
+{
+    "type": "landing-page",
+    "data": {
+        "session_message_section": {
+            "type": "ediwheel-session-message",
+            "data": {
+                "content": "-++layout.success_message.content",
+                "is_visible": "-++success_message.is_visible"
+            }
+        },
+        "navbar_section": {
+            "type": "ediwheel-navigation-bar",
+            "data": {
+                "title": "eDI",
+                "links": [
+                    {
+                        "type": "ediwheel-navigation-link",
+                        "data": {
+                            "url": "#about_us",
+                            "content": "-++layout.navbar.about_us"
+                        }
+                    },
+                    {
+                        "type": "ediwheel-navigation-link",
+                        "data": {
+                            "url": "/contact-and-faq",
+                            "content": "-++layout.navbar.contact_and_faq"
+                        }
+                    }
+                ]
+            }
+        },
+        "header_section": {
+            "type": "ediwheel-header",
+            "data": {
+                "title_section": {
+                    "type": "ediwheel-large-text-content",
+                    "data": {
+                        "title": "-++layout.header.title",
+                        "content": "-++layout.header.content"
+                    }
+                }
+            }
+        },
+        "content_sections": [
+            {
+                "type": "ediwheel-faq",
+                "data": {
+                    "title_section": {
+                        "type": "ediwheel-medium-text-content",
+                        "data": {
+                            "title": "-++contact_and_faq.faq.title",
+                            "content": "-++contact_and_faq.faq.subtitle"
+                        }
+                    },
+                    "item_sections": [
+                        {
+                            "type": "ediwheel-faq-item",
+                            "data": {
+                                "title": "-++contact_and_faq.faq.title",
+                                "content": "-++contact_and_faq.faq.subtitle"
+                            }
+                        },
+                        {
+                            "type": "ediwheel-faq-item",
+                            "data": {
+                                "title": "-++contact_and_faq.faq.title",
+                                "content": "-++contact_and_faq.faq.subtitle"
+                            }
+                        },
+                        {
+                            "type": "ediwheel-faq-item",
+                            "data": {
+                                "title": "-++contact_and_faq.faq.title",
+                                "content": "-++contact_and_faq.faq.subtitle"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "ediwheel-contact-form",
+                "data": {
+                    "id": "contact_us",
+                    "url": "/contact-and-faq",
+                    "title_section": {
+                        "type": "ediwheel-white-medium-text-content",
+                        "data": {
+                            "title": "-++contact_and_faq.contact_form.title",
+                            "content": "-++contact_and_faq.contact_form.subtitle"
+                        }
+                    },
+                    "form_item_sections": "-++contact_and_faq.contact_form.form_item_sections",
+                    "button_title": "-++contact_and_faq.contact_form.button_title"
+                }
+            }
+        ],
+        "footer_section": {
+            "type": "ediwheel-footer",
+            "data": {
+                "icon_links_section": {
+                    "type": "wertically-icon-links",
+                    "data": {
+                        "icon_sections": [
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-twitter"
+                                }
+                            },
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-facebook-f"
+                                }
+                            },
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-linkedin-in"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "footer_link_sections": [
+                    {
+                        "type": "ediwheel-footer-link",
+                        "data": {
+                            "url": "",
+                            "content": "-++layout.footer.terms_of_use"
+                        }
+                    },
+                    {
+                        "type": "ediwheel-footer-link",
+                        "data": {
+                            "url": "",
+                            "content": "-++layout.footer.privacy_policy",
+                            "added_classes": {
+                                "root": "me-3"
+                            }
+                        }
+                    }
+                ],
+                "copyright": {
+                    "company_name": "© 2022 eDIWheel corporation",
+                    "content": "-++layout.footer.copyright"
+                }
+            }
+        }
+    }
+}

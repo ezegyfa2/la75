@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Ezegyfa\LaravelHelperMethods\CopyNodeModules;
+use Ezegyfa\LaravelHelperMethods\Language\Commands\CreateListToTranslate;
 use Ezegyfa\LaravelHelperMethods\Language\Commands\CreateTranslateFile;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,11 +16,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        {
-            $this->commands([
-                CreateTranslateFile::class
-            ]);
-        }
+        $this->commands([
+            CopyNodeModules::class,
+            CreateTranslateFile::class,
+            CreateListToTranslate::class,
+        ]);
     }
 
     /**

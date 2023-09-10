@@ -1,4 +1,4 @@
-const mix = require('laravel-mix')
+const mix = require('laravel-mix');
 const path = require('path')
 
 mix.webpackConfig({
@@ -11,7 +11,7 @@ mix.webpackConfig({
             {
                 test: /\.scss$/,
                 use: [
-                  'sass-loader'
+                    'sass-loader'
                 ]
             }
         ]
@@ -24,7 +24,7 @@ mix.webpackConfig({
             )
         }
     }
-})
+});
 mix.js('resources/js/app.js', 'public/js')
-    .vue()
     .sass('resources/sass/app.scss', 'public/css')
+    .vue()

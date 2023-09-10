@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use Ezegyfa\LaravelHelperMethods\Language\LanguageMethods;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'welcome']);
+Route::get('/about-us', [HomeController::class, 'aboutUs']);
+Route::get('/contact-and-faq', [HomeController::class, 'contactAndFAQ']);
+Route::post('/contact-and-faq', [HomeController::class, 'storeContactMessage']);
+
+LanguageMethods::registerRoute();

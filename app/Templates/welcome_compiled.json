@@ -1,0 +1,224 @@
+{
+    "type": "landing-page",
+    "data": {
+        "session_message_section": {
+            "type": "ediwheel-session-message",
+            "data": {
+                "content": "-++layout.success_message.content",
+                "is_visible": "-++success_message.is_visible"
+            }
+        },
+        "navbar_section": {
+            "type": "ediwheel-navigation-bar",
+            "data": {
+                "title": "eDI",
+                "title_url": "/",
+                "links": [
+                    {
+                        "type": "ediwheel-navigation-link",
+                        "data": {
+                            "url": "/about-us",
+                            "content": "-++layout.navbar.about_us"
+                        }
+                    },
+                    {
+                        "type": "ediwheel-navigation-link",
+                        "data": {
+                            "url": "/contact-and-faq",
+                            "content": "-++layout.navbar.contact_and_faq"
+                        }
+                    }
+                ]
+            }
+        },
+        "header_section": {
+            "type": "ediwheel-header",
+            "data": {
+                "title_section": {
+                    "type": "ediwheel-large-text-content",
+                    "data": {
+                        "title": "-++layout.header.title",
+                        "content": "-++layout.header.content"
+                    }
+                }
+            }
+        },
+        "content_sections": [
+            {
+                "type": "ediwheel-roadmap",
+                "data": {
+                    "title_section": {
+                        "type": "ediwheel-medium-text-content",
+                        "data": {
+                            "title": "-++welcome.roadmap.title",
+                            "content": "-++welcome.roadmap.subtitle"
+                        }
+                    },
+                    "timeline_section": {
+                        "type": "ediwheel-timeline",
+                        "data": {
+                            "timeline_item_sections": [
+                                {
+                                    "type": "ediwheel-timeline-item",
+                                    "data": {
+                                        "image_url": "assets/roadmap/idea.jpg",
+                                        "content_sections": [
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "title": "-++welcome.roadmap.idea.title",
+                                                    "sub_title": "-++welcome.roadmap.idea.research_market.title",
+                                                    "content": "-++welcome.roadmap.idea.research_market.content"
+                                                }
+                                            },
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "sub_title": "-++welcome.roadmap.idea.concept.title",
+                                                    "content": "-++welcome.roadmap.idea.concept.content"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "ediwheel-timeline-item",
+                                    "data": {
+                                        "image_url": "assets/roadmap/research.jpg",
+                                        "is_inverted": true,
+                                        "content_sections": [
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "title": "-++welcome.roadmap.research.title",
+                                                    "sub_title": "-++welcome.roadmap.research.components.title",
+                                                    "content": "-++welcome.roadmap.research.components.content"
+                                                }
+                                            },
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "sub_title": "-++welcome.roadmap.research.costs.title",
+                                                    "content": "-++welcome.roadmap.research.costs.content"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "ediwheel-timeline-item",
+                                    "data": {
+                                        "image_url": "assets/roadmap/design.jpg",
+                                        "content_sections": [
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "title": "-++welcome.roadmap.design.title",
+                                                    "sub_title": "-++welcome.roadmap.design.design_concepts.title",
+                                                    "content": "-++welcome.roadmap.design.design_concepts.content"
+                                                }
+                                            },
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "sub_title": "-++welcome.roadmap.design.finalize_design.title",
+                                                    "content": "-++welcome.roadmap.design.finalize_design.content"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "ediwheel-timeline-item",
+                                    "data": {
+                                        "image_url": "assets/roadmap/prototyping.jpg",
+                                        "is_inverted": true,
+                                        "with_line": false,
+                                        "content_sections": [
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "title": "-++welcome.roadmap.prototyping.title",
+                                                    "content": "-++welcome.roadmap.prototyping.functions"
+                                                }
+                                            },
+                                            {
+                                                "type": "ediwheel-two-title-text-content",
+                                                "data": {
+                                                    "content": "-++welcome.roadmap.prototyping.conditions"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "ediwheel-two-title-text-content",
+                                    "data": {
+                                        "title": "-++welcome.roadmap.footer_title"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            null
+        ],
+        "footer_section": {
+            "type": "ediwheel-footer",
+            "data": {
+                "icon_links_section": {
+                    "type": "wertically-icon-links",
+                    "data": {
+                        "icon_sections": [
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-twitter"
+                                }
+                            },
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-facebook-f"
+                                }
+                            },
+                            {
+                                "type": "ediwheel-button-icon-link",
+                                "data": {
+                                    "url": "",
+                                    "icon_class": "fab fa-linkedin-in"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "footer_link_sections": [
+                    {
+                        "type": "ediwheel-footer-link",
+                        "data": {
+                            "url": "",
+                            "content": "-++layout.footer.terms_of_use"
+                        }
+                    },
+                    {
+                        "type": "ediwheel-footer-link",
+                        "data": {
+                            "url": "",
+                            "content": "-++layout.footer.privacy_policy",
+                            "added_classes": {
+                                "root": "me-3"
+                            }
+                        }
+                    }
+                ],
+                "copyright": {
+                    "company_name": "© 2022 eDIWheel corporation",
+                    "content": "-++layout.footer.copyright"
+                }
+            }
+        }
+    }
+}
