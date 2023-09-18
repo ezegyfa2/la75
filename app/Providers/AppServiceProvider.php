@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
             CreateTranslateFile::class,
             CreateListToTranslate::class,
         ]);
+        $this->loadViewsFrom(base_path('vendor/ezegyfa/laravel-helper-methods/src'), 'ezegyfa');
     }
 
     /**

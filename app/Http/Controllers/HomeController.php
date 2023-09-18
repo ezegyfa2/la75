@@ -11,29 +11,63 @@ use Illuminate\Support\Facades\Session;
 class HomeController extends Controller
 {
     public function welcome() {
-        $templateParams = DynamicTemplateMethods::getTranslatedTemplateParamsFromFile(base_path('app/Templates/welcome_compiled.json'));
-        if (property_exists($templateParams, 'success_message')) {
-            $templateParams->success_message->is_visible = Session::has('success_message');
-        }
-        return DynamicTemplateMethods::getTemplateDynamicPage('ediwheel-welcome-template', $templateParams);
+        return DynamicTemplateMethods::getTranslatedTemplateDynamicPage(
+            'la75_welcome', 
+            'node_modules/la75-vue-components/src/Welcome/CompiledTemplate.json', 
+            new \StdClass,
+            [ 
+                'layout',
+                'welcome', 
+            ],
+            [ 
+                'fontawesome/css/fontawesome.min', 
+                'fontawesome/css/brands.min' 
+            ]
+        );
     }
 
     public function aboutUs() {
-        $templateParams = DynamicTemplateMethods::getTranslatedTemplateParamsFromFile(base_path('app/Templates/aboutUs_compiled.json'));
+        $templateParams = new \StdClass;
         if (property_exists($templateParams, 'success_message')) {
             $templateParams->success_message->is_visible = Session::has('success_message');
         }
-        return DynamicTemplateMethods::getTemplateDynamicPage('ediwheel-about-us-template', $templateParams);
+        return DynamicTemplateMethods::getTranslatedTemplateDynamicPage(
+            'la75_about_us', 
+            'node_modules/la75-vue-components/src/AboutUs/CompiledTemplate.json', 
+            new \StdClass,
+            [ 
+                'layout',
+                'aboutUs',
+            ], 
+            [ 
+                'fontawesome/css/fontawesome.min', 
+                'fontawesome/css/brands.min' 
+            ]
+        );
     }
 
     public function contactAndFAQ() {
         $templateParams = DynamicTemplateMethods::getTranslatedTemplateParamsFromFile(base_path('app/Templates/contactAndFAQ_compiled.json'));
         $templateParams->questions = \DB::table('faq')->select(['question', 'answer'])->get()->toArray();
-        $templateParams->contact_and_faq->contact_form->form_item_sections = json_decode(file_get_contents(base_path('app/Templates/contactUsTableInfos.json')));
+        $templateParams->contact_form = new \stdClass;
+        $templateParams->contact_form->form_item_sections = json_decode(file_get_contents(base_path('app/Templates/contactUsTableInfos.json')));
         if (property_exists($templateParams, 'success_message')) {
             $templateParams->success_message->is_visible = Session::has('success_message');
         }
-        return DynamicTemplateMethods::getTemplateDynamicPage('ediwheel-contact-and-faq-template', $templateParams);
+        return DynamicTemplateMethods::getTranslatedTemplateDynamicPage(
+            'la75_contact_and_faq', 
+            'node_modules/la75-vue-components/src/ContactAndFAQ/CompiledTemplate.json',
+            $templateParams, 
+            [ 
+                'layout',
+                'layoutWithHeader',
+                'contactAndFAQ',
+            ], 
+            [ 
+                'fontawesome/css/fontawesome.min', 
+                'fontawesome/css/brands.min' 
+            ]
+        );
     }
 
     public function storeContactMessage(Request $request) {

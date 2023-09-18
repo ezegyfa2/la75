@@ -25,6 +25,10 @@ mix.webpackConfig({
         }
     }
 });
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .vue()
+
+mix.js('resources/js/basicPackages.js', 'public/js').vue()
+mix.js('resources/js/layout.js', 'public/js').vue()
+mix.js('resources/js/layoutWithHeader.js', 'public/js').vue()
+mix.js('resources/js/welcome.js', 'public/js').vue()
+mix.js('resources/js/aboutUs.js', 'public/js').vue()
+mix.js('resources/js/contactAndFAQ.js', 'public/js').vue()
